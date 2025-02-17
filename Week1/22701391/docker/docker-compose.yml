@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.11'
 services:
   crawler:
     build: 
@@ -14,8 +14,8 @@ services:
     restart: always
 
   mongo:
-    image: mongo
-    container_name: mongo
+    image: mongoDB
+    container_name: mongoDB
     ports:
       - "27017:27017"
     volumes:
