@@ -1,26 +1,14 @@
 # CRAWLER PROJECT
 
 ## Giới thiệu
-Dự án này là một hệ thống thu thập dữ liệu từ các trang web như DienMayXanh và VnExpress, sau đó lưu trữ vào các tệp CSV, TXT hoặc cơ sở dữ liệu như MongoDB, MySQL, PostgreSQL.
+Dự án xây dựng hệ thống thu thập dữ liệu từ các trang web như FPTShop và Nhaccuatui, sau đó lưu trữ vào các tệp CSV, TXT và cơ sở dữ liệu MongoDB.
 
 ## Cấu trúc thư mục
 ```
-CRAWLER_PROJECT/
-│── config/
-│   ├── settings.yml            # Cấu hình chung của dự án
-│
-│── data/                       # Thư mục lưu trữ dữ liệu crawl được
-│   ├── csv/
-│   │   ├── dienmayxanh_products.csv
-│   │   ├── vnexpress_news.csv
-│   ├── txt/
-│       ├── dienmayxanh_products.txt
-│       ├── vnexpress_news.txt
-│
+22701391/                       # Tên Project
 │── docker/                     # Cấu hình Docker
 │   ├── docker-compose.yml
 │   ├── Dockerfile
-│
 │── src/
 │   ├── crawlers/               # Chứa các script crawler
 │   │   ├── __init__.py
@@ -28,9 +16,24 @@ CRAWLER_PROJECT/
 │   │   ├── site1_crawler.py     # Crawler cho trang DienMayXanh
 │   │   ├── site2_crawler.py     # Crawler cho trang VnExpress
 │   ├── database/               # Chứa các module xử lý database
+│   │   ├── __init__.py
+│   │   ├── mongo_handler.py    
+│   │   ├── txt_handler.py   
+│   │   ├── csv_handler.py  
 │   ├── utils/                  # Chứa các tiện ích hỗ trợ
-│   ├── main.py                 # File chạy chính của dự án
-│
+│   │   ├── __init__.py
+│   │   ├── logger.py    
+│   │   ├── helpers.py  
+│   ├── main.py                 # File chính
+│── data/                       # Thư mục lưu trữ dữ liệu crawl được
+│   ├── csv/
+│   │   ├── fptshop_products.csv
+│   │   ├── nhaccuatui_songs.csv
+│   ├── txt/
+│   │   ├── fptshop_products.txt
+│   │   ├── nhaccuatui_songs.txt
+│── config/
+│   ├── settings.yml            # Cấu hình chung
 │── requirements.txt            # Danh sách thư viện cần thiết
 │── README.md                   # Tài liệu hướng dẫn
 ```
@@ -68,4 +71,4 @@ docker logs -f crawler_project
 ```
 
 ## Liên hệ
-Nếu có vấn đề hoặc cần hỗ trợ, vui lòng liên hệ qua email: support@example.com
+Nếu có vấn đề hoặc cần hỗ trợ, vui lòng liên hệ qua email: dothanhminhphu@gmail.com
