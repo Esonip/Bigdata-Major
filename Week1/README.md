@@ -58,7 +58,7 @@ python src/main.py
 #### a) Xây dựng Docker Image
 ```bash
 cd docker
-docker build -t 22701391 .
+docker-compose build
 ```
 #### b) Chạy Docker Container
 ```bash
