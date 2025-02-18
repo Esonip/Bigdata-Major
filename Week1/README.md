@@ -58,16 +58,16 @@ python src/main.py
 #### a) Xây dựng Docker Image
 ```bash
 cd docker
-docker build -t crawler_project .
+docker build -t 22701391 .
 ```
 #### b) Chạy Docker Container
 ```bash
-docker-compose -f docker/docker-compose.yml up -d
+docker-compose up -d
 ```
 
-#### c) Kiểm tra logs
+#### c) Kiểm tra container hoạt động
 ```bash
-docker logs -f crawler_project
+docker ps
 ```
 
 ## Liên hệ
