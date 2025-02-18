@@ -13,7 +13,6 @@ class FPTShopCrawler(BaseCrawler):
         super().__init__(url)
 
     def parse_page(self, html):
-        """Phân tích HTML và lấy thông tin sản phẩm từ FPT Shop"""
         soup = BeautifulSoup(html, "html.parser")
         products = []
 
@@ -35,7 +34,6 @@ class FPTShopCrawler(BaseCrawler):
         return products
 
     def run(self):
-        """Chạy quá trình crawl"""
         html = self.fetch_page()
         if html:
             products = self.parse_page(html)

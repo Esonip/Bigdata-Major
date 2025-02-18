@@ -13,7 +13,6 @@ class NhaccuatuiCrawler(BaseCrawler):
         super().__init__(base_url)
 
     def parse_page(self, html):
-        """Phân tích HTML và lấy thông tin bài hát từ Nhaccuatui"""
         soup = BeautifulSoup(html, "html.parser")
         songs = []
         
@@ -39,7 +38,6 @@ class NhaccuatuiCrawler(BaseCrawler):
         return songs
 
     def run(self):
-        """Chạy quá trình crawl"""
         html = self.fetch_page()
         if html:
             songs = self.parse_page(html)
